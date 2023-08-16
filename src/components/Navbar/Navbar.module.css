@@ -1,0 +1,132 @@
+.wrapper {
+    position: sticky;
+    position: -webkit-sticky;
+    display: flex;
+    top: 0;
+    height: 5rem;
+    justify-content: space-between;
+    background-color: var(--dark-color);
+    border-bottom: 1px solid var(--accent-color);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+.imagewrapper {
+    display: inline-block;
+    margin: 1rem;
+    margin-left: 2.5rem;
+    position: relative;
+    width: 4rem;
+    transition: all 0.3s ease;
+    font-size: 0rem;
+}
+.imagewrapper img {
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: invert(85%) sepia(10%) saturate(402%) hue-rotate(329deg)
+        brightness(115%) contrast(103%);
+}
+.imagewrapper:hover img {
+    filter: invert(36%) sepia(40%) saturate(2522%) hue-rotate(350deg)
+        brightness(109%) contrast(84%);
+}
+.navItems {
+    height: 5rem;
+    display: flex;
+    padding-right: 2rem;
+    transition: all 0.3s ease;
+}
+.navItemText {
+    height: 5rem;
+    line-height: 5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+}
+.navItem:hover .navItemText {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--light-color);
+}
+.hamburgerMenu {
+    display: none;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+    padding: 1.5rem 0;
+    filter: invert(96%) sepia(1%) saturate(1919%) hue-rotate(337deg)
+        brightness(102%) contrast(102%);
+}
+.hamburgerMenuOpen {
+    filter: invert(41%) sepia(60%) saturate(1437%) hue-rotate(345deg)
+        brightness(96%) contrast(92%) !important;
+}
+.wrapperMenuOpen {
+    height: 11rem !important;
+    transition: all 0.5s ease;
+    flex-direction: row-reverse !important;
+}
+.imagewrapperMenuOpen {
+    transition: all 0.5s ease;
+    display: none !important;
+}
+.navItemsMenuOpen {
+    transition: all 0.5s ease;
+    display: block !important;
+    position: relative !important;
+    top: 0 !important;
+}
+
+@media (max-width: 750px) {
+    .navItemText {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 637px) {
+    .navItemText {
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+}
+@media (max-width: 550px) {
+    .wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        min-height: 5rem;
+        height: 5rem;
+        transition: all 0.3s ease;
+    }
+    .hamburgerMenu {
+        display: flex;
+    }
+    .navItems {
+        position: absolute;
+        top: -500px;
+        display: block;
+        height: auto;
+        padding: 1rem 0;
+    }
+    .navItem {
+        display: block;
+        text-align: start;
+    }
+    .imagewrapper {
+        display: block;
+        height: 2rem;
+        width: 3.5rem;
+        margin: 0;
+        transition: all 0.3s ease;
+    }
+    .navItemText {
+        line-height: 3rem;
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+}
